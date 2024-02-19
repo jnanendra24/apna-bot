@@ -2,12 +2,16 @@ import React from 'react'
 
 export default function Questions() {
     const [questions, setQuestions] = React.useState([{
-        ques: 'What is your name?',
-        ans: ''
+        ques: 'What is your name?'
     },
     {
-        ques: 'What is your age?',
-        ans: ''
+        ques: 'What is your age?'
+    },
+    {
+        ques: 'What are your hobbies?'
+    },
+    {
+        ques:'Lorem ipsum dolor?'
     }]);
     const handleClick = (index) => {
         // generate some random text
@@ -30,7 +34,7 @@ export default function Questions() {
                         > 
                             <div className='flex flex-col font-serif'>
                             <span>{question.ques}</span>
-                            <span>{question.ans}</span>
+                            <span>{question?.ans}</span>
                             </div>
                             <button
                             className='bg-blue-500 text-white rounded-md p-1 hover:bg-blue-400 hover:scale-105 transition-all ease-in-out duration-300'
