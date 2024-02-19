@@ -13,6 +13,9 @@ export default function FileUpload({ setIsFileUploaded }) {
         if (file && file.size > 20 * 1024 * 1024) {
             setError('File size cannot exceed more than 20mb');
         }
+        else if(file && file.type !== 'application/pdf'){
+            setError("Please select a pdf file")
+        }
         else {
             setFile(file);
             setError(null);
